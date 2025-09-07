@@ -1,0 +1,111 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with ProblemBaba</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body class="chat-body">
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="images/baba-avatar.png" class="sidebar-avatar">
+                <div class="user-info">
+                    <div id="user-email">user@example.com</div>
+                    <div id="subscription-status" class="status-free">Free Trial</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>🔥 Daily Streak</h4>
+                <div id="streak-counter">0 days</div>
+                <button id="streak-btn" class="streak-btn">Check In Today!</button>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>📝 Recent Questions</h4>
+                <div id="questions-list" class="questions-list">
+                    <p class="no-questions">No questions yet. Start chatting!</p>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">Logout 👋</button>
+            </div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <button id="toggle-sidebar" class="sidebar-toggle">☰</button>
+                <h2>ProblemBaba Chat 🤓</h2>
+                <div class="ai-controls">
+                    <select id="ai-personality">
+                        <option value="funny">Funny Friend 😄</option>
+                        <option value="serious">Serious Guru 🧙‍♂️</option>
+                        <option value="motivational">Motivational Baba 💪</option>
+                    </select>
+                    <select id="solution-format">
+                        <option value="text">Text Solution 📖</option>
+                        <option value="meme">Funny Meme 😂</option>
+                        <option value="photo">Photo/Image 🖼️</option>
+                        <option value="video">Video Link 🎥</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="chat-bubbles" class="chat-bubbles">
+                <div class="chat-bubble assistant-bubble">
+                    <div class="bubble-avatar">🤓</div>
+                    <div class="bubble-content">
+                        <strong>ProblemBaba says:</strong><br>
+                        Hey there! I'm here to solve your problems with AI magic! Share any problem and I'll give you solutions, memes, or funny advice. What's troubling you today? 😊
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Problem of the Day -->
+            <div id="problem-of-day" class="problem-of-day">
+                <h4>🌟 Problem of the Day</h4>
+                <p>How to stay motivated while working from home?</p>
+                <button onclick="loadProblemOfDay()">Get AI Solution!</button>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <textarea 
+                        id="problem-input" 
+                        placeholder="Share your problem here... ProblemBaba will solve it! 🎯"
+                        rows="3"
+                    ></textarea>
+                    <button id="send-btn" class="send-btn">
+                        Get Solution! 🚀
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Meme Generator Section -->
+            <div id="meme-generator" class="meme-generator" style="display:none;">
+                <h3>🎨 Create Your Meme</h3>
+                <div class="meme-controls">
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <input type="text" id="topText" placeholder="Top text (auto-filled by AI)">
+                    <input type="text" id="bottomText" placeholder="Bottom text">
+                    <canvas id="memeCanvas" width="400" height="400"></canvas>
+                    <div class="meme-actions">
+                        <button id="downloadMeme" class="meme-btn">Download Meme 📥</button>
+                        <button id="shareMeme" class="meme-btn">Share on Social 📱</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/chat.js"></script>
+    <script src="js/meme.js"></script>
+</body>
+</html>

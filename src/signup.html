@@ -1,0 +1,44 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join ProblemBaba - Start Free Trial</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-bg">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <img src="images/baba-avatar.png" alt="ProblemBaba" class="auth-avatar">
+                <h2>Welcome to ProblemBaba! 🎉</h2>
+                <p>Start your 30-day free trial now</p>
+            </div>
+            
+            <form id="auth-form" class="auth-form">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Create password (min 6 chars)" required minlength="6">
+                </div>
+                <button type="submit" class="auth-btn" id="auth-submit">
+                    Start Free Trial 🚀
+                </button>
+            </form>
+            
+            <div id="errorBox" class="error-message"></div>
+            <div id="loadingBox" class="loading-message" style="display:none;">
+                Creating your account... 🎯
+            </div>
+            
+            <div class="auth-switch">
+                <p>Already have an account? <span id="switch-mode">Login instead</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
